@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Docker Lab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Docker Labor</h1>
+        <p>Tudeng: <strong>MATTIAS ELMERS</strong></p>
+        <p>Kuupäev: <span id="date"></span></p>
+        <p>Container ID: <span id="hostname"></span></p>
+    </div>
+    <script>
+        document.getElementById('date').innerText = new Date().toLocaleString();
+        fetch('/hostname')
+            .then(r => r.text())
+            .then(h => document.getElementById('hostname').innerText = h)
+            .catch(() => document.getElementById('hostname').innerText = 'N/A');
+    </script>
+</body>
+</html>

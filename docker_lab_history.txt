@@ -1,0 +1,146 @@
+    1  sudo shutdown now
+    2  ssh-keygen -t ed25519 -C "mattias.elmers@gmail.com"
+    3  cat ~/.ssh/id_ed25519.pub 
+    4  ssh -T git@github.com
+    5  mkdir ansible_lamp
+    6  cd ansible_lamp/
+    7  ssh -T git@github.com
+    8  git clone git@github.com:unematti0/ansible_lamp.git
+    9  echo "test" > README.md
+   10  git add .
+   11  git clone git@github.com:unematti0/ansible_lamp.git
+   12  cd ..
+   13  ls -la
+   14  mv ~/ansible_lamp ~/projects/
+   15  ls -la
+   16  rm projects/
+   17  rm -a projects/
+   18  rm --help
+   19  rm -d projects/
+   20  rm -r projects/
+   21  ls -la
+   22  mkdir ansible_lamp
+   23  cd ansible_lamp/
+   24  git clone git@github.com:unematti0/ansible_lamp.git
+   25  echo "test2" > README.md
+   26  git add .
+   27  ls -a
+   28  rm README.md 
+   29  git status
+   30  cd ..
+   31  ls -la
+   32  find ~ -type d -name ".git"
+   33  cd ansible_lamp/
+   34  rm ansible_lamp/
+   35  cd ..
+   36  rm ansible_lamp/
+   37  rm -r ansible_lamp/
+   38  git clone git@github.com:unematti0/ansible_lamp.git
+   39  cd ..
+   40  cd ~
+   41  cd ansible_lamp/
+   42  git status
+   43  echo "test" > README.md
+   44  git add .
+   45  git commit -m "test ühendus"
+   46  git push
+   47  mkdir playbooks/
+   48  mkdir templates/
+   49  group_vars/
+   50  mkdir group_vars/
+   51  touch inventory.ini
+   52  touch ansible.cfg
+   53  cd playbooks/
+   54  touch system.yml
+   55  touch apache.yml
+   56  touch mysql.yml
+   57  touch php.yml
+   58  touch site.yml
+   59  cd ..
+   60  cd templates/
+   61  touch vhost.conf.j2
+   62  touch index.php.j2
+   63  cd ..
+   64  cd group_vars/
+   65  mkdir all
+   66  mkdir lamp_servers
+   67  cd all
+   68  touch main.yml
+   69  cd ..
+   70  cd lamp_servers/
+   71  touch main.yaml
+   72  cd ..
+   73  git add .
+   74  git commit -m "Struktuur(failid tühjad)"
+   75  git push
+   76  cd ..
+   77  sudo apt update
+   78  sudo apt upgrade
+   79  sudo apt install ansible
+   80  sudo apt update
+   81  sudo apt install -y rsyslog
+   82  rsyslogd -v
+   83  systemctl status rsyslog
+   84  sudo nano /etc/rsyslog.conf
+   85  sudo mkdir -p /var/log/remote
+   86  sudo chmod 755 /var/log/remote
+   87  sudo chown syslog:adm /var/log/remote
+   88  sudo nano /etc/rsyslog.d/remote.conf
+   89  sudo systemctl restart rsyslog
+   90  systemctl status rsyslog
+   91  sudo ss -uln | grep 514
+   92  tail -f /var/log/remote/syslog.log
+   93  cd ansible_lamp/
+   94  ansible-playbook -i inventory.ini playbooks/site.yml --become --ask-become-pass
+   95  git pull
+   96  ansible-playbook -i inventory.ini playbooks/site.yml --become --ask-become-pass
+   97  git pull
+   98  ansible-playbook -i inventory.ini playbooks/site.yml --become --ask-become-pass
+   99  cd ansible_lamp/
+  100  git pull
+  101  ansible windows -i inventory.ini -m win_ping
+  102  cat ~/.ssh/id_ed25519.pub 
+  103  ansible windows -i inventory.ini -m win_ping
+  104  ip a
+  105  ansible windows -i inventory.ini -m win_ping
+  106  ssh kasutaja@10.0.82.10
+  107  ansible windows -i inventory.ini -m win_ping
+  108  git pull
+  109  ansible lamp_server -i inventory.ini -m win_ping
+  110  ssh-copy-id ansible@10.0.82.12
+  111  ssh-copy-id kasutaja@10.0.82.12
+  112  ansible lamp_server -i inventory.ini -m win_ping
+  113  git pull
+  114  ansible lamp_server -i inventory.ini -m win_ping
+  115  ansible lamp_server -i inventory.ini -m ping
+  116  ansible-playbook -i inventory.ini  playboks/site.taml
+  117  ansible-playbook -i inventory.ini  playboks/site.yaml
+  118  ansible-playbook -i inventory.ini  playbooks/site.yaml
+  119  ls -la
+  120  ansible-playbook -i inventory.ini  playbooks/site.yaml
+  121  ansible-playbook -i inventory.ini  playbooks/site.yml
+  122  git pull
+  123  ansible-playbook -i inventory.ini  playbooks/site.yml
+  124  git pull
+  125  ansible-playbook -i inventory.ini  playbooks/site.yml
+  126  ansible-playbook -i inventory.ini  playbooks/site.yml  --become --ask-become-pass
+  127  ip a
+  128  sudo nano /etc/netplan/50-cloud-init.yaml 
+  129  cd /etc/netplan
+  130  ls -la
+  131  sudo nano /etc/netplan/50-cloud-init.yaml 
+  132  sudo neplan apply
+  133  sudo netplan apply
+  134  ip a
+  135  ping 8.8.8.8
+  136  cd ansible_lamp/
+  137  sudo nano playbooks/system.yml 
+  138  cd ansible_lamp/
+  139  sudo nano playbooks/system.yml 
+  140  cd ansible_lamp/
+  141  sudo nano playbooks/system.yml 
+  142  cd docker-web-app/
+  143  history | grep docker > docker_lab_history.txt
+  144  sudo nano docker_lab_history.txt 
+  145  history
+  146  history > docker_lab_history.txt 
